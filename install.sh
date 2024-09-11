@@ -64,12 +64,10 @@ sudo docker compose -f $HOME/infernet-container-starter/deploy/docker-compose.ya
 cd $HOME
 mkdir -p foundry
 cd foundry
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
 source ~/.bashrc
 echo 'export PATH="$PATH:/root/.foundry/bin"' >> .profile
 source .profile
-
+foundryup
 # Установка зависимостей для контрактов
 cd $HOME/infernet-container-starter/projects/hello-world/contracts/lib/
 rm -r forge-std
